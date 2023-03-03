@@ -1,8 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-type Props = {}
+import { urlFor } from 'sanity'
+import { PageInfo } from '@/pages/api/typing'
+type Props = {
+    pageInfo?: PageInfo
+}
 
-const About = (props: Props) => {
+
+const About = ({ pageInfo }: Props) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -23,14 +28,14 @@ const About = (props: Props) => {
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                src=""
+                src={pageInfo?.mainImage ? urlFor(pageInfo?.mainImage).url() : ""}
                 className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
             ></motion.img>
             <div className='space-y-10 px-0 md:px-10'>
                 <h4 className='text-4xl font-semibold '>
                     Here is a <span className='underline decoration-[#f7ab0a]'>little</span> background
                 </h4>
-                <p className='text-base'>A Full Stack Developer proficient in JS and Rails with a decade of experience spearheading and architecting applications in NestJs, Typescript, NextJs, and React. He has demonstrated his expertise with apps that span industries, from real-time applications that allow multiple users to collaborate to e-commerce and food tech apps with a significant user base. His extensive knowledge of SQL (ORM) and NoSql (ODM) proves an asset in building scalable and high performing applications.</p>
+                <p className='text-base'>{pageInfo?.backgroundInfo}</p>
             </div>
         </motion.div>
     )

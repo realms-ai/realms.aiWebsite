@@ -1,2 +1,5 @@
 node_modules
 .next
+sanity/node_modules
+.env.production
+.env.local
