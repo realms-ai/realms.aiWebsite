@@ -3,3 +3,4 @@ node_modules
 sanity/node_modules
 .env.production
 .env.local
+pm2 start npm --name  "realms" --interpreter bash -- start

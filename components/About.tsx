@@ -35,7 +35,10 @@ const About = ({ pageInfo }: Props) => {
                 <h4 className='text-4xl font-semibold '>
                     Here is a <span className='underline decoration-[#f7ab0a]'>little</span> background
                 </h4>
+
+
                 <p className='text-base'>{pageInfo?.backgroundInfo}</p>
+                {pageInfo?.expandedBackgroundInfo && <p className='text-base'>{pageInfo?.expandedBackgroundInfo}</p>}
             </div>
         </motion.div>
     )

@@ -17,7 +17,6 @@ const Hero = ({ pageInfo }: Props) => {
         loop: true,
         delaySpeed: 2000
     })
-
     return (
         <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden '>
             <BackgroundCircles />
@@ -28,6 +27,9 @@ const Hero = ({ pageInfo }: Props) => {
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
                     {pageInfo?.name ? pageInfo.name : ""}
+                </h2>
+                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+                    {pageInfo?.role ? pageInfo.role.current : ""}
                 </h2>
                 <h1 className='text-5xl lg:text-6xl font-semibold '>
                     <span className='mr-3'>{text}</span>

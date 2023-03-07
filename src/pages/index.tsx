@@ -53,10 +53,10 @@ export default function Home({ projects, skills, pageInfo }: Props) {
 
       <Header />
 
-
       <section id="hero" className='snap-start'>
         <Hero pageInfo={pageInfo} />
       </section>
+
       <section id="about" className='snap-center'>
         <About pageInfo={pageInfo} />
       </section>

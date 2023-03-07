@@ -11,7 +11,10 @@ interface Image {
     _type: string;
   };
 }
-
+interface Slug {
+  _type: "slug";
+  current: string;
+}
 export interface Social extends SanityBody {
   _type: "social";
   title: string;
@@ -21,7 +24,7 @@ export interface Social extends SanityBody {
 export interface PageInfo extends SanityBody {
   _type: "pageInfo";
   name: string;
-  role: string;
+  role: Slug;
   mainImage: Image;
   profileImage: Image;
   email: string;
@@ -29,6 +32,7 @@ export interface PageInfo extends SanityBody {
   linkedinAddress: string;
   backgroundInfo: string;
   socials: Social[];
+  expandedBackgroundInfo: string;
 }
 export interface Skill extends SanityBody {
   _type: "skill";
@@ -44,6 +48,8 @@ export interface Project extends SanityBody {
   summary: string;
   technologies: Skill[];
   linkToBuild: string;
+  keyFeatures: string[];
+  role: string;
 }
 export interface Experience extends SanityBody {
   _type: "experience";
@@ -55,6 +61,7 @@ export interface Experience extends SanityBody {
   isCurrentlyWorkingHere: boolean;
   technologies: Skill[];
   points: string[];
+  linkToCompany: string;
 }
 export interface User extends SanityBody {
   _type: "user";
