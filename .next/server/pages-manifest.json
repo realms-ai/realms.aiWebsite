@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/api/getExperience": "pages/api/getExperience.js",
+  "/api/getPageInfo": "pages/api/getPageInfo.js",
+  "/api/getProject": "pages/api/getProject.js",
+  "/api/getSkill": "pages/api/getSkill.js",
+  "/api/getSocial": "pages/api/getSocial.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/getUser": "pages/api/getUser.js",
+  "/_error": "pages/_error.js",
+  "/": "pages/index.js",
+  "/[username]": "pages/[username].js",
+  "/404": "pages/404.html"
+}
