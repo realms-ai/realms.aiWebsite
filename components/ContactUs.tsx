@@ -35,16 +35,9 @@ const ContactUs = (props: Props) => {
                     <div className='flex items-center space-x-5 justify-center'>
                         <EnvelopeIcon onClick={() => { window.location.href = 'mailto:realms-ai@gmail.com' }}
                             className='text-[#f7ab0a] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>realms-ai@gmail.com</p>
+                        <p className='text-2xl'>info.realms.ai@gmail.com</p>
                     </div>
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <MapPinIcon className='text-[#f7ab0a] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>realms-ai@gmail.com</p>
-                    </div>
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <PhoneIcon className='text-[#f7ab0a] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>realms-ai@gmail.com</p>
-                    </div>
+
 
                     <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
                         <div className='flex space-x-2'>

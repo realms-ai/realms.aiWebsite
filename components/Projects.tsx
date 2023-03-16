@@ -37,7 +37,7 @@ const Projects = ({ projects }: Props) => {
 
                             alt='project video' />
                         <div className='space-y-6 px-0 md:px-2 max-w-6xl'>
-                            <Link href={project?.linkToBuild ? project?.linkToBuild : ''}>
+                            <Link href={project?.linkToBuild ? project?.linkToBuild : ''} target="_blank">
                                 <h4 className='xl:text-4xl md:text-2xl text-xl font-semibold text-center'>
                                     <span className='underline decoration-[#f7ab0a]/50'>
                                         {project?.title}

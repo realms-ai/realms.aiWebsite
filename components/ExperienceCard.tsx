@@ -10,18 +10,21 @@ const ExperienceCard = ({ experience }: Props) => {
 
     return (
         <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[450px] md:w-[550px] xl:w-[700px] snap-center bg-[#292929] p-6 hover:opacity-100 hover:shadow-xl opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
-            <motion.img
+            <motion.figure
                 initial={{ y: -100, opacity: 0 }}
                 transition={{
                     duration: 1.2
                 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="w-24 h-24 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+                viewport={{ once: true }}>
+                <img
 
-                src={experience?.companyImage ? urlFor(experience?.companyImage).url() : ""}
-                alt='companylogo'
-            />
+                    className="w-24 h-24 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+
+                    src={experience?.companyImage ? urlFor(experience?.companyImage).url() : ""}
+                    alt='companylogo'
+                />
+            </motion.figure>
             <div className='px-0 md:px-6'>
                 <h4 className='text-2xl font-light'>
                     {experience?.jobTitle}
@@ -48,3 +51,49 @@ const ExperienceCard = ({ experience }: Props) => {
 }
 
 export default ExperienceCard
+
+github.com - simer
+realms - ai
+# Untroddenlabs account
+Host github.com - untroddenlabs
+    HostName github.com
+    User untroddenlabs
+    IdentityFile ~/.ssh/untroddenlabs
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+# Simerpreet's account, - the default config (Working in Github & Bitbucket)
+Host simer
+HostName simer
+    IdentityFile ~/.ssh/simer
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+# Navpreet's account
+User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+# realms  account
+Host *
+    HostName realms - ai
+    IdentityFile ~/.ssh/realmsai
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+    # Default github account: oanhnn
+Host simer
+   HostName simer
+   IdentityFile ~/.ssh/simer
+   IdentitiesOnly yes
+   
+# Other github account: superman
+Host realmsai
+   HostName github.com
+   IdentityFile ~/.ssh/realmsai
+   IdentitiesOnly yes
